@@ -1,0 +1,64 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 250px;
+  height: 440px;
+  margin: 0 10px;
+  position: relative;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  height: 70px;
+  padding-top: 5px;
+  background: #4a9ffb;
+  border-radius: 0 0 5px 5px;
+}
+
+.cardHeader .title {
+  margin: 0 10px;
+}
+
+.cardHeader .voteAverage {
+  text-align: center;
+  height: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  background: #78b9ff;
+  font-weight: 400;
+  text-shadow: 2px 1px 2px #565656;
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.overview {
+  position: absolute;
+  text-align: center;
+  bottom: 65px;
+  background: #ffffffce;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.cardContainer:hover .overview {
+  opacity: 1;
+}
+
+#green {
+  color: rgb(0, 255, 0);
+}
+#orange {
+  color: orange;
+}
+#red {
+  color: red;
+}
