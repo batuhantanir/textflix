@@ -1,0 +1,52 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0d253f;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.companyName {
+  margin-left: 30px;
+  color: #4a9ffb;
+}
+
+.companyName,
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyName svg {
+  margin-right: 6px;
+  font-size: x-large;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+}
+
+.socialMedia svg {
+  margin: 0 10px;
+  font-size: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #4a9ffb;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin: 20px;
+}
+
+.copyright {
+  text-align: center;
+  width: 80%;
+  border-top: 2px solid white;
+}
