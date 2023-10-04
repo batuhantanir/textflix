@@ -28,7 +28,7 @@ const Footer = () => {
         </ul>
         <ul className={styles.socialMedia}>
           <li>
-            <Link to='https://www.instagram.com' target="_blank">
+            <Link to='https://www.instagram.com/36batu' target="_blank">
               <AiFillInstagram />
             </Link>
           </li>
@@ -43,7 +43,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to='https://www.linkedin.com' target="_blank">
+            <Link to='https://www.linkedin.com/in/batuhan-tanir' target="_blank">
               <AiFillLinkedin />
             </Link>
           </li>

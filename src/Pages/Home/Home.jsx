@@ -20,6 +20,8 @@ const Home = () => {
     (state) => state.nowPlayingMovies
   ).nowPlayingMovies;
 
+    
+
   return (
     <div className={styles.homeContainer}>
       <SortMovies movies={trendingMovies} title={"Trend"} />

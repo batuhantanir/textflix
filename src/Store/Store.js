@@ -4,6 +4,7 @@ import TrendingMoviesSlice from "./features/GetTrendingMovies";
 import TopRatedMoviesSlice from "./features/GetTopRatedMovies";
 import UpComingMoviesSlice from "./features/GetUpComingMovies";
 import NowPlayingMoviesSlice from "./features/GetNowPlayingMovies";
+import SearchMoviesSlice from "./features/GetSearchMovies";
 
 export const store = configureStore({
   reducer: {
@@ -11,5 +12,6 @@ export const store = configureStore({
     topRatedMovies: TopRatedMoviesSlice,
     upComingMovies: UpComingMoviesSlice,
     nowPlayingMovies: NowPlayingMoviesSlice,
+    searchMovies: SearchMoviesSlice,
   },
 });
