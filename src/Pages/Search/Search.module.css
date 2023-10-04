@@ -1,10 +1,43 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    color: #fff;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.changePageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #215c9b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:hover {
+  scale: 1.1;
+}
+.btn:active {
+  scale: 0.9;
+}
+.btn:disabled {
+  background-color: #215c9ba3;
+}
+.pageNumber {
+  margin: 10px;
+  padding: 10px;
+  color: #000;
+  font-weight: 600;
 }

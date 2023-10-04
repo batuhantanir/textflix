@@ -33,6 +33,7 @@ const Search = () => {
       dispatch(GetSearchMovies({ value: searchValue, page: page + 1 }));
     }
   };
+  console.log(searchMovies);
 
   if (status === "loading") return <Loading />;
 
@@ -48,33 +49,39 @@ const Search = () => {
             )
           )}
         </div>
-        {!(searchMovies.length < 20) && page == 1 && (
-          <div>There are no more movies</div>
-        )}
-        {page == 1 ? (
-          <button onClick={handlePage} id="prev" disabled>
-            Prev page
-          </button>
-        ) : (
-          <button onClick={handlePage} id="prev">
-            Prev page
-          </button>
-        )}
+        <div className={styles.changePageContainer}>
+          {page == 1 ? (
+            <button
+              onClick={handlePage}
+              id="prev"
+              className={styles.btn}
+              disabled
+            >
+              Prev
+            </button>
+          ) : (
+            <button onClick={handlePage} id="prev" className={styles.btn}>
+              Prev
+            </button>
+          )}
 
-        {!(searchMovies.length < 20) && page == 1 ? (
-          <div>{page}</div>
-        ) : (
-          <div>There are no more movies!</div>
-        )}
-        {!(searchMovies.length < 20) ? (
-          <button onClick={handlePage} id="next">
-            Next page
-          </button>
-        ) : (
-          <button onClick={handlePage} id="next" disabled>
-            Next page
-          </button>
-        )}
+          <div className={styles.pageNumber}>{page}</div>
+
+          {!(searchMovies.length < 20) ? (
+            <button onClick={handlePage} id="next" className={styles.btn}>
+              Next
+            </button>
+          ) : (
+            <button
+              onClick={handlePage}
+              id="next"
+              className={styles.btn}
+              disabled
+            >
+              Next
+            </button>
+          )}
+        </div>
       </div>
     )
   );
