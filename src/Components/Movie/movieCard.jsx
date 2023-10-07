@@ -1,6 +1,7 @@
 import React from "react";
 //CSS
 import styles from "./movieCard.module.css";
+import { Link } from "react-router-dom";
 
 const movieCard = ({ movie }) => {
   return (
@@ -28,7 +29,12 @@ const movieCard = ({ movie }) => {
           <div>no vote</div>
         )}
       </div>
-      <span className={styles.overview}>{movie.overview}</span>
+      <span className={styles.overview}>
+        {movie.overview.slice(0, 200)}
+        <Link to={`/detail/${movie.id}`} className={styles.readMore}>
+          ...Read more
+        </Link>
+      </span>
     </div>
   );
 };

@@ -14,12 +14,19 @@ const Search = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (value === "") return alert("Please enter a movie name");
+    if (value === "") {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 2000);
+      return 
+    }
     dispatch(changeValue(value));
-    dispatch(GetSearchMovies({ value, page:1 }));
+    dispatch(GetSearchMovies({ value, page: 1 }));
     navigate("/search");
   };
 
@@ -36,6 +43,7 @@ const Search = () => {
       <button type="submit">
         <BiSearch />
       </button>
+      {error && <p className={styles.error}>Please enter a value</p>}
     </form>
   );
 };

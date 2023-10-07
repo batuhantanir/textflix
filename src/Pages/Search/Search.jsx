@@ -11,6 +11,7 @@ import {
   changePage,
 } from "../../Store/features/GetSearchMovies";
 import Loading from "../Loading/Loading";
+import NextPageButtons from "../../Components/nextPageButtons";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,6 @@ const Search = () => {
       dispatch(GetSearchMovies({ value: searchValue, page: page + 1 }));
     }
   };
-  console.log(searchMovies);
 
   if (status === "loading") return <Loading />;
 
@@ -49,39 +49,7 @@ const Search = () => {
             )
           )}
         </div>
-        <div className={styles.changePageContainer}>
-          {page == 1 ? (
-            <button
-              onClick={handlePage}
-              id="prev"
-              className={styles.btn}
-              disabled
-            >
-              Prev
-            </button>
-          ) : (
-            <button onClick={handlePage} id="prev" className={styles.btn}>
-              Prev
-            </button>
-          )}
-
-          <div className={styles.pageNumber}>{page}</div>
-
-          {!(searchMovies.length < 20) ? (
-            <button onClick={handlePage} id="next" className={styles.btn}>
-              Next
-            </button>
-          ) : (
-            <button
-              onClick={handlePage}
-              id="next"
-              className={styles.btn}
-              disabled
-            >
-              Next
-            </button>
-          )}
-        </div>
+        <NextPageButtons movies={searchMovies} page={page} handlePage={handlePage}/>
       </div>
     )
   );

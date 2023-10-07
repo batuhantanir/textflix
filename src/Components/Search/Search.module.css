@@ -4,6 +4,7 @@
   background: #0d253f;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .searchContainer input,
@@ -42,10 +43,31 @@ input:focus::placeholder {
   padding-block: 0;
   padding-inline: 0;
   color: #fff;
-
 }
 
 .searchContainer button svg {
   padding: 5px 5px 0 0;
   font-size: 18px;
+}
+
+.error {
+  position: absolute;
+  background: rgba(225, 55, 55, 0.9);
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  top: 15px;
+}
+
+.error::before {
+  content: "";
+  position: absolute;
+  border-color: transparent transparent rgba(225, 55, 55, 0.9) transparent;
+  border-style: solid;
+  border-width: 0px 10px 10px 10px;
+  width: 0px;
+  height: 0px;
+  top: -10px;
+  left: 5px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 //CSS
 import styles from "./searchMovies.module.css";
+import { Link } from "react-router-dom";
 
 const SearchMovies = ({ movie }) => {
   return (
@@ -12,7 +13,9 @@ const SearchMovies = ({ movie }) => {
       />
       <h1 className={styles.title}>{movie.title}</h1>
       {movie.overview !== "" ? (
-        <p className={styles.overview}>{movie.overview.slice(0, 200)}...</p>
+        <p className={styles.overview}>
+          {movie.overview.slice(0, 200)}<Link to={`/detail/${movie.id}`} className={styles.readMore}>...Read more</Link>
+        </p>
       ) : (
         ""
       )}

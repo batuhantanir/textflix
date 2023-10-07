@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: flex-end;
   margin: 20px;
-  width: 25%;
-  height: 595px;
+  width: 350px;
+  height: 650px;
   overflow-y: hidden;
-  background-color: #0D253F;
+  background-color: #0d253f;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
@@ -21,7 +21,8 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .title {
-  font-size: 20px;
+  font-size: 100%;
+  text-align: center;
   font-weight: bold;
   color: #fff;
   margin-top: 10px;
@@ -29,17 +30,20 @@
 }
 
 .overview {
-  width: 75%;
+  width: 73.5%;
   position: absolute;
   border-radius: 0 0 10px 10px;
   background: #ffffffe5;
   color: #000;
   padding: 15px;
   opacity: 0;
-  bottom: 50px;
+  bottom: 45px;
   transition: opacity 0.5s ease-in-out;
 }
 
 .container:hover .overview {
   opacity: 1;
+}
+.readMore{
+  color:#3c98fa;
 }

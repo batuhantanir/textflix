@@ -3,6 +3,8 @@ import axios from "axios";
 
 const initialState = {
   trendingMovies: [],
+  status: "idle",
+  error: null,
 };
 
 export const GetTrendingMovies = createAsyncThunk("getTrendingMovies", async () => {
@@ -25,8 +27,16 @@ export const TrendingMoviesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    builder.addCase(GetTrendingMovies.pending, (state) => {
+      state.status="loading"
+    });
     builder.addCase(GetTrendingMovies.fulfilled, (state, { payload }) => {
+      state.status="success"
       state.trendingMovies = payload;
+    });
+    builder.addCase(GetTrendingMovies.rejected, (state, action) => {
+      state.status="failed"
+      state.error = action.error.message;
     });
   },
 });

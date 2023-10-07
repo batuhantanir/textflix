@@ -37,6 +37,12 @@
   color: #4a9ffb;
 }
 
+.socialMedia svg:hover {
+  scale: 1.1;
+  transition: all 0.3s ease-in-out;
+  transform: rotateZ(360deg);
+}
+
 .nav {
   display: flex;
 }

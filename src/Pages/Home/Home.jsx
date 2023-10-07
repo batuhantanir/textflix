@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 import { useSelector } from "react-redux";
 //COMPONENTS
 import SortMovies from "../../Components/Movies/sortMovies";
+import Loading from "../Loading/Loading";
 
 const Home = () => {
   const trendingMovies = useSelector(
@@ -19,8 +20,6 @@ const Home = () => {
   const nowPlayingMovies = useSelector(
     (state) => state.nowPlayingMovies
   ).nowPlayingMovies;
-
-    
 
   return (
     <div className={styles.homeContainer}>
