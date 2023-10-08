@@ -1,9 +1,20 @@
 .moviesContainer {
   background: #215c9b;
-  width: 85%;
-  height: 530px;
+  width: 95%;
+  height: fit-content;
   border-radius: 5px;
   margin: 30px 10px;
+}
+
+.title {
+  color: #fff;
+  background: #0d253f;
+  padding: 5px 10px;
+  border-radius: 30px;
+  width: fit-content;
+  margin-left: 70px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
 }
 
 .movieScrollContainer {
@@ -19,17 +30,6 @@
   overflow-y: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-.title {
-  color: #fff;
-  background: #0d253f;
-  padding: 5px 10px;
-  border-radius: 30px;
-  width: fit-content;
-  margin-left:70px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
 }
 
 .cardBox {
@@ -60,4 +60,13 @@
 /* Handle on hover */
 .movieScrollContainer::-webkit-scrollbar-thumb:hover {
   background: #0d253f;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+
+  .moviesContainer {
+    width: 85%;
+    height: 530px;
+  }
 }

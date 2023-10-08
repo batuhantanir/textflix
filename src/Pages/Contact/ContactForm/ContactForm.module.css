@@ -1,8 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   border: 2px solid black;
   border-radius: 3px;
   padding: 2rem;
@@ -21,6 +20,7 @@
   background: #fff;
   border-radius: 5px;
   border: 2px solid rgb(164, 163, 163);
+  height: 25px;
 }
 
 #fullName > input:focus,
@@ -50,8 +50,8 @@
 
 #message > textarea {
   resize: none;
-  height: 10rem;
-  width: 30rem;
+  height: 250px;
+  width: 100%;
 }
 
 .submit {
@@ -72,4 +72,12 @@
 }
 .submit:active {
   transform: scale(0.95);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #message > textarea {
+    height: 150px;
+    width: 350px;
+  }
 }

@@ -11,17 +11,24 @@
   justify-content: center;
 }
 .brand {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-right: 5rem;
+  display: none;
 }
 
-.brand > h4 {
-  margin: 0;
-  padding: 0;
-}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .brand {
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 5rem;
+  }
+  .brand > h4 {
+    margin: 0;
+    padding: 0;
+  }
 
-.brand > svg {
-  height: 100%;
-  width: 100%;
+  .brand > svg {
+    height: 100%;
+    width: 100%;
+  }
 }

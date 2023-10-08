@@ -1,18 +1,22 @@
 .container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.genresContainer {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 120px;
-  margin-bottom: 120px;
 }
 
 .genre {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   width: 100px;
   height: 100px;
@@ -22,4 +26,18 @@
 }
 
 .genre:hover {
+  background: rgba(25, 46, 70, 0.85);
+  transition: 0.5s;
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+
+  .container {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+
+  .genre {
+    margin: 20px;
+  }
 }

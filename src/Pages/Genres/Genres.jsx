@@ -16,11 +16,18 @@ const Genres = () => {
 
   return (
     <div className={styles.container}>
-      {genres.map((genre) => (
-        <Link key={genre.id} className={styles.genre} to={`/genre/${genre.id}`}>
-          <div>{genre.name}</div>
-        </Link>
-      ))}
+      <h1>Genres</h1>
+      <div className={styles.genresContainer}>
+        {genres.map((genre) => (
+          <Link
+            key={genre.id}
+            className={styles.genre}
+            to={`/genre/${genre.id}`}
+          >
+            <div>{genre.name}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

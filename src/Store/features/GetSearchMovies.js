@@ -54,7 +54,7 @@ export const SearchMoviesSlice = createSlice({
       state.searchMovies = payload;
     });
     builder.addCase(GetSearchMovies.rejected, (state, action) => {
-      state.status = "fialed";
+      state.status = "failed";
       state.error = action.error.message;
     });
   },

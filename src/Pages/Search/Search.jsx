@@ -47,8 +47,14 @@ const Search = () => {
     return <Loading />;
   }
 
+  if (status === "failed") {
+    console.log("failed");
+    return <h1>Something went wrong</h1>;
+  }
+
   return (
-    searchMovies.length !== 0 && (
+    searchMovies.length !== 0 &&
+    status == "success" && (
       <div>
         <div className={styles.container}>
           {searchMovies.map((movie) =>

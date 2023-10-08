@@ -7,6 +7,10 @@ const About = () => {
   return (
     <div className={styles.container}>
       <div className={styles.itemContainer}>
+        <div className={styles.brand}>
+          <TbBrandNetflix />
+          <h4>TextFlix</h4>
+        </div>
         <div className={styles.letter}>
           textflix is a website that allows you to search for movies and tv
           shows and get information about them. Lorem ipsum, dolor sit amet
@@ -20,10 +24,6 @@ const About = () => {
           adipisicing elit. Esse doloremque dolores nihil iure libero facilis
           mollitia, velit officiis at ex repudiandae repellendus, debitis iusto.
           Quaerat dolorum maiores dolores repellat earum.
-        </div>
-        <div className={styles.brand}>
-          <TbBrandNetflix />
-          <h4>TextFlix</h4>
         </div>
       </div>
     </div>

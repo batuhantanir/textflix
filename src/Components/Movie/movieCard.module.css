@@ -3,8 +3,8 @@
   flex-direction: column;
   position: absolute;
   left: 0;
-  width: 250px;
-  height: 440px;
+  width: 150px;
+  height: fit-content;
   margin: 0 10px;
   position: relative;
   box-shadow: 0 0 10px black;
@@ -14,11 +14,13 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  align-items: center;
+  width: 100%;
   height: 70px;
   padding-top: 5px;
   background: #4a9ffb;
   border-radius: 0 0 5px 5px;
+  overflow: hidden;
 }
 
 .cardHeader .title {
@@ -44,9 +46,10 @@
   position: absolute;
   text-align: center;
   padding: 0 3px;
-  bottom: 65px;
+  bottom: 74px;
   background: #0000007d;
   color: #fff;
+  font-size: smaller;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
@@ -72,4 +75,16 @@
 }
 #red {
   color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .cardContainer {
+    width: 250px;
+    height: 440px;
+  }
+  .overview {
+    bottom: 65px;
+    font-size: smaller;
+  }
 }

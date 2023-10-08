@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   position: relative;
+  width: 40%;
+  margin: 0 5px;
 }
 
 .searchContainer input,
@@ -17,7 +19,7 @@
   border: none;
   padding: 5px 0 5px 5px;
   color: #fff;
-
+  width: 100%;
 }
 
 .searchContainer:has(> input:focus),
@@ -72,4 +74,11 @@ input:focus::placeholder {
   height: 0px;
   top: -10px;
   left: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .searchContainer {
+    width: 200px;
+  }
 }
