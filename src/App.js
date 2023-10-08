@@ -38,6 +38,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/textflix/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/detail/:movie_id" element={<Detail />} />
         <Route path="/contact" element={<Contact />} />
