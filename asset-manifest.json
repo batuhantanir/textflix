@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/textflix/static/css/main.5b0140a1.css",
+    "main.js": "/textflix/static/js/main.216a2bfb.js",
+    "index.html": "/textflix/index.html",
+    "main.5b0140a1.css.map": "/textflix/static/css/main.5b0140a1.css.map",
+    "main.216a2bfb.js.map": "/textflix/static/js/main.216a2bfb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b0140a1.css",
+    "static/js/main.216a2bfb.js"
+  ]
+}
