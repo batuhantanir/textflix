@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 2rem;
+  margin-bottom: 30px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#fullName > input,
+#email > input,
+#message > textarea {
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid rgb(164, 163, 163);
+}
+
+#fullName > input:focus,
+#email > input:focus {
+  outline: none;
+  border: 2px solid black;
+  scale: 1.1;
+}
+#message > textarea:focus {
+  outline: none;
+  border: 2px solid black;
+  scale: 1.02;
+}
+
+#fullName > div,
+#email > div,
+#message > div {
+  bottom: -2rem;
+  margin-left: 5px;
+  background: rgba(250, 50, 50, 0.9);
+  width: 150px;
+  height: 28px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#message > textarea {
+  resize: none;
+  height: 10rem;
+  width: 30rem;
+}
+
+.submit {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #4a9ffb;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border: 1px solid #4a9ffb;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.submit:hover {
+  background-color: #fff;
+  color: #4a9ffb;
+  border: 1px solid #4a9ffb;
+}
+.submit:active {
+  transform: scale(0.95);
+}

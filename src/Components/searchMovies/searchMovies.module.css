@@ -46,4 +46,9 @@
 }
 .readMore{
   color:#3c98fa;
+  margin-left: 5px;
+}
+
+.readMore:hover{
+  text-decoration: underline;
 }

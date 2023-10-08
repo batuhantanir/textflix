@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const movieCard = ({ movie }) => {
   return (
-    <div className={styles.cardContainer}>
+    <Link to={`/detail/${movie.id}`} className={styles.cardContainer}>
       <img
         className={styles.image}
         src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
@@ -30,12 +30,12 @@ const movieCard = ({ movie }) => {
         )}
       </div>
       <span className={styles.overview}>
-        {movie.overview.slice(0, 200)}
+        {movie.overview.slice(0, 200)}...
         <Link to={`/detail/${movie.id}`} className={styles.readMore}>
-          ...Read more
+          Read more
         </Link>
       </span>
-    </div>
+    </Link>
   );
 };
 

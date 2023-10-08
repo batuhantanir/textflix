@@ -43,14 +43,25 @@
 .overview {
   position: absolute;
   text-align: center;
+  padding: 0 3px;
   bottom: 65px;
-  background: #ffffffce;
+  background: #0000007d;
+  color: #fff;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
 
 .cardContainer:hover .overview {
   opacity: 1;
+}
+
+.overview a {
+  padding-left: 5px;
+  color: #4a9ffb;
+}
+
+.overview a:hover {
+  text-decoration: underline;
 }
 
 #green {

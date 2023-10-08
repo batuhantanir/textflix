@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 //CSS
-import styles from "./Search.module.css";
+import styles from "./SearchForm.module.css";
 //REACT İCON
 import { BiSearch } from "react-icons/bi";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   GetSearchMovies,
   changeValue,
 } from "../../Store/features/GetSearchMovies";
 import { useNavigate } from "react-router-dom";
 
-const Search = () => {
+const SearchForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [value, setValue] = useState("");
@@ -23,11 +23,12 @@ const Search = () => {
       setTimeout(() => {
         setError(false);
       }, 2000);
-      return 
+      return;
     }
     dispatch(changeValue(value));
     dispatch(GetSearchMovies({ value, page: 1 }));
     navigate("/search");
+    setValue("");
   };
 
   return (
@@ -36,6 +37,7 @@ const Search = () => {
         onChange={(e) => {
           setValue(e.target.value);
         }}
+        value={value}
         type="text"
         id="search-input"
         placeholder="Search.."
@@ -48,4 +50,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchForm;

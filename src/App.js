@@ -21,6 +21,7 @@ import Contact from "./Pages/Contact/Contact";
 import Genres from "./Pages/Genres/Genres";
 import Genre from "./Pages/Genre/Genre";
 import Detail from "./Pages/Detail/Detail";
+import About from "./Pages/About";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/detail/:movie_id" element={<Detail />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/genre/:id" element={<Genre />} />
       </Routes>

@@ -13,6 +13,9 @@ import {
 import Loading from "../Loading/Loading";
 import NextPageButtons from "../../Components/nextPageButtons";
 
+//pages
+import PleaseSearch from "./PleaseSearch";
+
 const Search = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.searchMovies.status);
@@ -24,18 +27,25 @@ const Search = () => {
 
   const handlePage = (e) => {
     if (e.target.id === "prev" && page > 1) {
+      window.scrollTo(0, 0);
       setPage(page - 1);
       dispatch(changePage(page));
       dispatch(GetSearchMovies({ value: searchValue, page: page - 1 }));
     }
     if (e.target.id === "next" && !(searchMovies.length < 20)) {
+      window.scrollTo(0, 0);
       setPage(page + 1);
       dispatch(changePage(page));
       dispatch(GetSearchMovies({ value: searchValue, page: page + 1 }));
     }
   };
+  if (status === "idle") {
+    return <PleaseSearch />;
+  }
 
-  if (status === "loading") return <Loading />;
+  if (status === "loading") {
+    return <Loading />;
+  }
 
   return (
     searchMovies.length !== 0 && (
@@ -49,7 +59,11 @@ const Search = () => {
             )
           )}
         </div>
-        <NextPageButtons movies={searchMovies} page={page} handlePage={handlePage}/>
+        <NextPageButtons
+          movies={searchMovies}
+          page={page}
+          handlePage={handlePage}
+        />
       </div>
     )
   );

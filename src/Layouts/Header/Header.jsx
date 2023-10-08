@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 //CSS
 import styles from "./Header.module.css";
 //Component
-import Search from "../../Components/Search/Search";
+import SearchForm from "../../Components/SearchForm/SearchForm";
 
 const Header = () => {
   return (
     <header>
       <Link to="/">Textflix</Link>
-      <Search />
+      <SearchForm />
       <ul className={styles.nav}>
         <li>
           <Link to="/">Home</Link>

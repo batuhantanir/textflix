@@ -17,11 +17,9 @@ const Genres = () => {
   return (
     <div className={styles.container}>
       {genres.map((genre) => (
-        <div key={genre.id}>
-          <Link style={{ color: "black" }} to={`/genre/${genre.id}`}>
-            {genre.name}
-          </Link>
-        </div>
+        <Link key={genre.id} className={styles.genre} to={`/genre/${genre.id}`}>
+          <div>{genre.name}</div>
+        </Link>
       ))}
     </div>
   );
