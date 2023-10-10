@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/textflix/static/css/main.d3be64d0.css",
+    "main.css": "/textflix/static/css/main.0905da04.css",
     "main.js": "/textflix/static/js/main.12b31fb3.js",
     "index.html": "/textflix/index.html",
-    "main.d3be64d0.css.map": "/textflix/static/css/main.d3be64d0.css.map",
+    "main.0905da04.css.map": "/textflix/static/css/main.0905da04.css.map",
     "main.12b31fb3.js.map": "/textflix/static/js/main.12b31fb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3be64d0.css",
+    "static/css/main.0905da04.css",
     "static/js/main.12b31fb3.js"
   ]
 }
